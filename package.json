@@ -12,5 +12,8 @@
   "bugs": {
     "url": "https://github.com/AaronHammond/word-based-digests/issues"
   },
-  "homepage": "https://github.com/AaronHammond/word-based-digests"
+  "homepage": "https://github.com/AaronHammond/word-based-digests",
+  "dependencies": {
+    "sha3": "^1.0.0"
+  }
 }
