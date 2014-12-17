@@ -13,6 +13,10 @@ var sampledWords = require('./prufrock.txt.json');
 exports.humanizeDigest = function(digest, baseOpt) {
 	var base = baseOpt || 16;
 
+	if(!(2 <= base && base <= 32)) {
+		throw new Error("Only digest strings with encodings between base 2 and 32 are currently supported");
+	}
+
 	var readableDigest = [];
 	var bitLength = largestPowerOf2(base);
 	var blockLength = Math.floor(largestPowerOf2(sampledWords.length) / bitLength);
@@ -40,6 +44,10 @@ exports.humanizeDigest = function(digest, baseOpt) {
  */
 exports.dehumanizeDigest = function(humanDigest, baseOpt) {
 	var base = baseOpt || 16;
+
+	if(!(2 <= base && base <= 32)) {
+		throw new Error("Only digest strings with encodings between base 2 and 32 are currently supported");
+	}
 
 	var readableDigest = [];
 	var bitLength = largestPowerOf2(base);

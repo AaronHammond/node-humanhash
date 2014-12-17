@@ -31,11 +31,11 @@ We can therefore convert between a boring old base16 encoded hash that's more or
 
     humanizeDigest(digest, base)
 
-`digest` is the string to "humanize", and `base` is the base of the encoding used to create the digest (defaults to 16). Returns a more human readable string representation of the digest.
+`digest` is the string to "humanize", and `base` is the base (only 2 <= `base` <= 32 are currently supported) of the encoding used to create the digest (defaults to 16). Returns a more human readable string representation of the digest.
 
     dehumanizeDigest(humanizedDigest, base)
 
-`humanizedDigest` is a previously created humanized digest string, and `base` is the base of the encoding used to create the original digest. Returns the original digest used to create the humanized digest string.
+`humanizedDigest` is a previously created humanized digest string, and `base` is the base (only 2 <= `base` <= 32 are currently supported) of the encoding used to create the original digest. Returns the original digest used to create the humanized digest string.
 
 
 ## Technical Details
