@@ -1,6 +1,6 @@
 {
   "name": "node-humanhash",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A proof of concept to create more user-friendly hash digests that are based on human language rather than indecipherable base16 strings",
   "main": "index.js",
   "repository": {
