@@ -1,6 +1,15 @@
 // prufrock.txt.json is the file created by parsing prufrock.txt with the word-list-maker.js utility
 var sampledWords = require('./prufrock.txt.json');
 
+/* humanizeDigest
+ *
+ * Required: 
+ *   [0] digest: the base_base encoded digest to make human readable
+ * Optional: 
+ *   [0] baseOpt: the base in which the digest string is encoded - defaults to 16
+ * 
+ * Returns: a human readable form of the digest
+ */
 exports.humanizeDigest = function(digest, baseOpt) {
 	var base = baseOpt || 16;
 
@@ -20,6 +29,15 @@ exports.humanizeDigest = function(digest, baseOpt) {
 	return readableDigest.join(" ");
 }
 
+/* dehumanizeDigest
+ *
+ * Required: 
+ *   [0] humanDigest: the human readable form of the original digest
+ * Optional: 
+ *   [0] baseOpt: the base that was used to encode the original digest
+ * 
+ * Returns: the original digest string
+ */
 exports.dehumanizeDigest = function(humanDigest, baseOpt) {
 	var base = baseOpt || 16;
 
